@@ -1,4 +1,8 @@
+<?php
+include 'conexao.php';
+?>
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -13,7 +17,7 @@
         <div class="container section1">
             <img src="img/walle.png" class="img-responsive" style="padding-left: 40px;">
 
-            <form class="form-signin">
+            <form class="form-signin" method="post" action="AutenticarUsuario.php">
                 <h2 class="form-signin-heading">Login</h2>
                 <label for="inputEmail" class="sr-only">Email </label>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus="">
@@ -24,7 +28,7 @@
                         <input type="checkbox" value="remember-me"> Continuar conectado
                     </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" style="background: #4F94CD">Entrar</button>
             </form>
 
         </div>
