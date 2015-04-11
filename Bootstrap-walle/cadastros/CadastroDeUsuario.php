@@ -16,7 +16,7 @@
             <img src="../img/walle.png" class="img-responsive" style="padding: 0px 0px 20px 350px;">
             <nav class="navbar navbar-inverse">
 
-                
+
                 <div id="navbar" class="collapse navbar-collapse" style="background: #4F94CD">
                     <ul class="nav navbar-nav">
                         <li><a href="#" style="color: #FFFFFF"><img src="../img/inicio.png" style="width: 30px;"> Inicio</a></li>
@@ -40,7 +40,32 @@
 
 
             </nav>
-
+            <form class="form-horizontal equipamento">
+                <div class="form-group">
+                    <label for="nomeUsuario" class="col-sm-2 control-label">Nome</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="Nome" style="width: 70%;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="emailUsuario" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="email@exemplo.com" style="width: 70%;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cpf" class="col-sm-2 control-label">CPF</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="inputEmail3" placeholder="111.111.111-00" style="width: 70%;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="senha" class="col-sm-2 control-label">Senha</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputEmail3" placeholder="*********" style="width: 70%;">
+                    </div>
+                </div>
+                
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

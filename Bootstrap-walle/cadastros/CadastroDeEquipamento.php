@@ -50,7 +50,9 @@
                 <div class="form-group">
                     <label for="tipoEquipamento" class="col-sm-2 control-label">Tipo</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="Tipo do Equipamento"style="width: 70%;">
+                        <select name="tipodeequipamento" style="width: 70%;" class="form-control">
+                            <option></option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
@@ -71,11 +73,11 @@
                         <input type="text" class="form-control" id="inputPassword3" placeholder="Tombo do Equipamento" style="width: 70%;">
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-
-                    </div>
+                <div>
+                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%;">Salvar</button>
+                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%; padding-left: 10px;">Excluir</button>
                 </div>
+            </form>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

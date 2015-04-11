@@ -25,3 +25,7 @@ z-index: 10000;
 .equipamento{
     padding-left: 80px;
 }
+.button{
+    float: left;
+    margin-left: 450px;
+}
