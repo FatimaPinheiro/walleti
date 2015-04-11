@@ -1,5 +1,4 @@
 <?php
-
 include "conexao.php";
 ?>
 <html>
@@ -8,7 +7,6 @@ include "conexao.php";
 	<script type="text/javascript">
 		function loginsuccessfully(){
 		setTimeout("window.location='Principal.php'");
- 
 }
 	function loginfailed(){
 	setTimeout("window.location='Index.php'");
@@ -19,9 +17,7 @@ include "conexao.php";
 <?php
 $email = $_POST['email'];
 $senha = $_POST['senha'];
-
 $sql = mysql_query("SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'") or die (mysql_error());
-
 $row = mysql_num_rows($sql);
 
 if($row > 0 ){
@@ -34,11 +30,7 @@ if($row > 0 ){
 }else{
 	echo"<center>Login ou senha incorreto! Por favor digite novamente!</center>";
 	echo"<script>loginfailed()</script>";
-
 }
-
 ?>
-
-
 </body>
 </html>
