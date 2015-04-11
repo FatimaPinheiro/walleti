@@ -16,7 +16,7 @@
             <img src="../img/walle.png" class="img-responsive" style="padding: 0px 0px 20px 350px;">
             <nav class="navbar navbar-inverse">
 
-                
+
                 <div id="navbar" class="collapse navbar-collapse" style="background: #4F94CD">
                     <ul class="nav navbar-nav">
                         <li><a href="#" style="color: #FFFFFF"><img src="../img/inicio.png" style="width: 30px;"> Inicio</a></li>
@@ -40,12 +40,46 @@
 
 
             </nav>
+            <form class="form-horizontal equipamento">
+                <div class="form-group">
+                    <label for="nomeEquipamento" class="col-sm-2 control-label">Nome</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="Nome" style="width: 70%;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tipoEquipamento" class="col-sm-2 control-label">Tipo</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputPassword3" placeholder="Tipo do Equipamento"style="width: 70%;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="descricao" class="col-sm-2 control-label">Descrição</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" rows="2" style="width: 70%;" ></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade" class="col-sm-2 control-label">Quantidade</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="Quantidade de equipamentos" style="width: 70%;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Tombo" class="col-sm-2 control-label">Tombo</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputPassword3" placeholder="Tombo do Equipamento" style="width: 70%;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
 
+                    </div>
+                </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </body>
 </html>
-
 
 

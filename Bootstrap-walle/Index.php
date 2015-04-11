@@ -8,7 +8,7 @@ include 'conexao.php';
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Walleti</title>
+        <title>Login Walleti</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/login.css">
@@ -20,7 +20,7 @@ include 'conexao.php';
             <form class="form-signin" method="post" action="AutenticarUsuario.php">
                 <h2 class="form-signin-heading">Login</h2>
                 <label for="inputEmail" class="sr-only">Email </label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus="">
+                <input type="email" id="email" class="form-control" placeholder="Email" required="" autofocus="">
                 <label for="inputPassword" class="sr-only">Senha</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
                 <div class="checkbox">
