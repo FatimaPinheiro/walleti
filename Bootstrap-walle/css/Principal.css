@@ -1,0 +1,24 @@
+.container{
+    width: 1000px;
+   padding: 20px 40px 40px 40px;
+   
+}
+ul li a:hover{
+   color: #FFF;
+}
+.section1{
+width: 1000px;
+height: 600px;
+background-clip: padding-box;
+background-color: #FFF;
+border: 1px solid rgba(0,0,0,.3);
+border-radius: 6px;
+box-shadow: 0 3px 7px rgba(0,0,0,.3);
+outline: 0;
+position: fixed;
+top: 10%;
+left: 15%;
+margin-left: -20px;
+margin-top: -30px;
+z-index: 10000;
+}

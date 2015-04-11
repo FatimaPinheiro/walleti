@@ -1,6 +1,6 @@
 <?php
 
-include "conexao.php";
+include "bd/conexao.php";
 ?>
 <html>
 <head>
@@ -20,7 +20,7 @@ include "conexao.php";
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$sql = mysql_query("SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'") or die (mysql_error());
+$sql = mysql_query("SELECT * FROM usuario WHERE email = '$email'AND senha = '$senha'") or die (mysql_error());
 
 $row = mysql_num_rows($sql);
 

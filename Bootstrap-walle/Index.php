@@ -3,7 +3,7 @@ include 'conexao.php';
 ?>
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@ include 'conexao.php';
         <title>Walleti</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/login.css"
+        <link rel="stylesheet" href="css/login.css">
     </head>
     <body>
         <div class="container section1">
@@ -28,7 +28,7 @@ include 'conexao.php';
                         <input type="checkbox" value="remember-me"> Continuar conectado
                     </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit" style="background: #4F94CD">Entrar</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" style="background: #4F94CD" value="email">Entrar</button>
             </form>
 
         </div>
