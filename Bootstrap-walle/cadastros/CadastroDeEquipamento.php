@@ -74,8 +74,8 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%;">Salvar</button>
-                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%; padding-left: 10px;">Excluir</button>
+                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;">Salvar</button>
+                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%;">Excluir</button>
                 </div>
             </form>
         </div>

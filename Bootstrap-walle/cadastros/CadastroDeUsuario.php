@@ -65,8 +65,13 @@
                         <input type="password" class="form-control" id="inputEmail3" placeholder="*********" style="width: 70%;">
                     </div>
                 </div>
-                
+                <div>
+                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;">Salvar</button>
+                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%;">Excluir</button>
+                </div>
+            </form>
         </div>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </body>
