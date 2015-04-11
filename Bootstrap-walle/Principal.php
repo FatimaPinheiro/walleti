@@ -1,6 +1,7 @@
 <?php
 include 'conexao.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -38,7 +39,7 @@ include 'conexao.php';
                         </div>
 
                     </div>
-                </div><!--/.nav-collapse -->
+                </div>
 
 
             </nav>

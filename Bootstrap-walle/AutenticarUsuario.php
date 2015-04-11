@@ -1,15 +1,18 @@
 <?php
 include "conexao.php";
 ?>
+
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 	<script type="text/javascript">
 		function loginsuccessfully(){
-		setTimeout("window.location='Principal.php'");
+		setTimeout("window.location='principal.php'");
+ 
 }
 	function loginfailed(){
-	setTimeout("window.location='Index.php'");
+	setTimeout("window.location='index.php'");
 }
 </script>
 </head>
@@ -17,7 +20,9 @@ include "conexao.php";
 <?php
 $email = $_POST['email'];
 $senha = $_POST['senha'];
-$sql = mysql_query("SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'") or die (mysql_error());
+
+$sql = mysql_query("SELECT * FROM usuario WHERE email = '$email'AND senha = '$senha'") or die (mysql_error());
+
 $row = mysql_num_rows($sql);
 
 if($row > 0 ){

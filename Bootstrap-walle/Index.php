@@ -18,9 +18,9 @@ include 'conexao.php';
             <form class="form-signin" method="post" action="AutenticarUsuario.php">
                 <h2 class="form-signin-heading">Login</h2>
                 <label for="inputEmail" class="sr-only">Email </label>
-                <input type="email" id="email" class="form-control" placeholder="Email" required="" autofocus="">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required="" autofocus="">
                 <label for="inputPassword" class="sr-only">Senha</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
+                <input type="password" name="senha" id="senha" class="form-control" placeholder="Senha" required="">
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Continuar conectado
