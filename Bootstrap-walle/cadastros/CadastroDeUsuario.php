@@ -56,14 +56,20 @@
                 <div class="form-group">
                     <label for="cpf" class="col-sm-2 control-label">CPF</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="inputEmail3" placeholder="111.111.111-00" style="width: 70%;">
+                        <input type="number" class="form-control" id="inputcpf" placeholder="111.111.111-00" style="width: 70%;">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="senha" class="col-sm-2 control-label">Senha</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputEmail3" placeholder="*********" style="width: 70%;">
+                        <input type="password" class="form-control" id="inputSenha" placeholder="*********" style="width: 70%;">
                     </div>
+                </div>
+                 <div class="form-group">
+                    <label for="adm" class="col-sm-2 control-label">Administrador</label>
+                        <div class="col-sm-10">
+                        <input type="checkbox" value="adm"> 
+                        </div>
                 </div>
                 <div>
                     <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;">Salvar</button>

@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cadastro de Curso</title>
+        <title>Cadastro de Reservas</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../css/Principal.css">
@@ -37,12 +37,42 @@
 
                     </div>
                 </div><!--/.nav-collapse -->
+
+
             </nav>
             <form class="form-horizontal equipamento">
                 <div class="form-group">
+                    <label for="data" class="col-sm-2 control-label">Data</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="inputEmail3" style="width: 30%;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="horario" class="col-sm-2 control-label">Horário</label>
+                    <div class="col-sm-10">
+                        <input type="time" class="form-control" id="inputEmail3" style="width: 30%;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Local" class="col-sm-2 control-label">Local</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" style="width: 70%;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="equipamento" class="col-sm-2 control-label">Equipamento</label>
+                    <div class="col-sm-10">
+                        <select name="equipamento" style="width: 70%;" class="form-control">
+                            <option></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="curso" class="col-sm-2 control-label">Curso</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="Nome  do Curso" style="width: 70%;">
+                        <select name="equipamento" style="width: 70%;" class="form-control">
+                            <option></option>
+                        </select>
                     </div>
                 </div>
                 <div>
@@ -55,3 +85,4 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </body>
 </html>
+
