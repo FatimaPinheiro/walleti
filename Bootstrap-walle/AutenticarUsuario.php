@@ -8,11 +8,11 @@ include "conexao.php";
 	<title></title>
 	<script type="text/javascript">
 		function loginsuccessfully(){
-		setTimeout("window.location='principal.php'");
+		setTimeout("window.location='Principal.php'");
  
 }
 	function loginfailed(){
-	setTimeout("window.location='index.php'");
+	setTimeout("window.location='Index.php'");
 }
 </script>
 </head>

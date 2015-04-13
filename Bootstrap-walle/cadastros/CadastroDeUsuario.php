@@ -40,29 +40,29 @@
 
 
             </nav>
-            <form class="form-horizontal equipamento">
+            <form class="form-horizontal equipamento" method="post" action="../EnviarCadastroUsuario.php">
                 <div class="form-group">
-                    <label for="nomeUsuario" class="col-sm-2 control-label">Nome</label>
+                    <label for="inputnome" class="col-sm-2 control-label">Nome</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="Nome" style="width: 70%;">
+                        <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" style="width: 70%;">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="emailUsuario" class="col-sm-2 control-label">Email</label>
+                    <label for="inputemail" class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="email@exemplo.com" style="width: 70%;">
+                        <input type="text" class="form-control"  name="email" id="email" placeholder="email@exemplo.com" style="width: 70%;">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="cpf" class="col-sm-2 control-label">CPF</label>
+                    <label for="inputcpf" class="col-sm-2 control-label">CPF</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="inputcpf" placeholder="111.111.111-00" style="width: 70%;">
+                        <input type="text" class="form-control" name="cpf" id="cpf" placeholder="111.111.111-00" style="width: 70%;">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="senha" class="col-sm-2 control-label">Senha</label>
+                    <label for="inputPassword" class="col-sm-2 control-label">Senha</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputSenha" placeholder="*********" style="width: 70%;">
+                        <input type="password" class="form-control" name="senha" id="senha" placeholder="*********" style="width: 70%;">
                     </div>
                 </div>
                  <div class="form-group">
