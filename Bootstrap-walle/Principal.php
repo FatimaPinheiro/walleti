@@ -23,8 +23,13 @@ include 'conexao.php';
                 <div id="navbar" class="collapse navbar-collapse" style="background: #4F94CD">
                     <ul class="nav navbar-nav">
                         <li><a href="Principal.php" style="color: #FFFFFF"><img src="img/inicio.png" style="width: 30px;"> Inicio</a></li>
+<<<<<<< .mine
+                        <li><a href="cadastros/Cadastros.php" style="color: #FFFFFF"><img src="img/cadastros.png" style="width: 30px;">Cadastros</a></li>
+                        <li><a href="cadastros/CadastrodeReservas.php" style="color: #FFFFFF"><img src="img/reservas.png" style="width: 30px;">Reservas</a></li>
+=======
                         <li><a href="#" style="color: #FFFFFF"><img src="img/cadastros.png" style="width: 30px;">Cadastros</a></li>                    
                         <li><a href="#contact" style="color: #FFFFFF"><img src="img/reservas.png" style="width: 30px;">Reservas</a></li>
+>>>>>>> .r12
                         <li><a href="#contact" style="color: #FFFFFF"><img src="img/relatorios.png" style="width: 30px;">Relatórios</a></li>
                         <li><a href="#contact" style="color: #FFFFFF"><img src="img/sair.png" style="width: 30px;">Sair</a></li>
                     </ul>
