@@ -17,9 +17,9 @@ $senha = $_POST["senha"];
 //deve ser exatamente igual ao banco de vocês. Veja a sintaxe: 
 //Insert into nomedatabela(campos do banco de dados) VALUES (variáveis informadas acima)
     $sql = "INSERT INTO usuario(nome, email, cpf, senha)
-    VALUES('$nome','$email', '$cpf', '$senha')";
+    VALUES('$nome', '$email', '$cpf', '$senha')";
     
-     $query=mysql_query($sql) or die("Houve um erro na gravação dos dados, verifique os valores passados");
+     $query = mysql_query($sql) or die("Houve um erro na gravação dos dados, verifique os valores passados");
 
    
     header("location: Principal.php"); 

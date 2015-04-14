@@ -40,11 +40,11 @@
 
 
             </nav>
-            <form class="form-horizontal equipamento">
+            <form class="form-horizontal equipamento" method="post" action="../EnviarCadastroEquipamento.php">
                 <div class="form-group">
                     <label for="nomeEquipamento" class="col-sm-2 control-label">Nome</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="Nome" style="width: 70%;">
+                        <input type="text" name="nome" class="form-control" id="inputEmail3" placeholder="Nome" style="width: 70%;">
                     </div>
                 </div>
                 <div class="form-group">
@@ -64,7 +64,7 @@
                 <div class="form-group">
                     <label for="quantidade" class="col-sm-2 control-label">Quantidade</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="Quantidade de equipamentos" style="width: 70%;">
+                        <input type="text" name="quantidade" class="form-control" id="inputEmail3" placeholder="Quantidade de equipamentos" style="width: 70%;">
                     </div>
                 </div>
                 <div class="form-group">

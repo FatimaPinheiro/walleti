@@ -38,11 +38,11 @@
                     </div>
                 </div><!--/.nav-collapse -->
             </nav>
-            <form class="form-horizontal equipamento">
+            <form class="form-horizontal equipamento" method="post" action="../EnviarCadastroCurso.php">
                 <div class="form-group">
                     <label for="curso" class="col-sm-2 control-label">Curso</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="Nome  do Curso" style="width: 70%;">
+                        <input type="text" name="curso" class="form-control" id="inputEmail3" placeholder="Nome  do Curso" style="width: 70%;">
                     </div>
                 </div>
                 <div>

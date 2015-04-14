@@ -40,23 +40,23 @@
 
 
             </nav>
-            <form class="form-horizontal equipamento">
+            <form class="form-horizontal equipamento" method="post" action="../EnviarCadastroReserva.php">
                 <div class="form-group">
                     <label for="data" class="col-sm-2 control-label">Data</label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control" id="inputEmail3" style="width: 30%;">
+                        <input type="date" name="data" class="form-control" id="inputEmail3" style="width: 30%;">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="horario" class="col-sm-2 control-label">Horário</label>
                     <div class="col-sm-10">
-                        <input type="time" class="form-control" id="inputEmail3" style="width: 30%;">
+                        <input type="time" name="horario" class="form-control" id="inputEmail3" style="width: 30%;">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="Local" class="col-sm-2 control-label">Local</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" style="width: 70%;">
+                        <input type="text" name="local" class="form-control" id="inputEmail3" style="width: 70%;">
                     </div>
                 </div>
                 <div class="form-group">
