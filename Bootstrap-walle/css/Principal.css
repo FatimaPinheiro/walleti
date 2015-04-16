@@ -32,3 +32,6 @@ z-index: 10000;
 button a{
     color: #FFFFFF;
 }
+button a:hover{
+    color: #F5DEB3;
+}

@@ -42,12 +42,10 @@
             </nav>
             
                 <div>
-                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; height: 30%; margin-right: 10px;"><a href="../listar/ListarCurso.php">  Cadastro de Curso</a></button>
-                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%;"><a href="../listar/ListarEquipamento.php">  Cadastro de Equipamentos</a></button>
-                </div>
-                <div>
-                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../listar/ListarUsuario.php">  Cadastro de Usuario</a></button>
-                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%;"><a href="../Principal.php">Voltar</a></button>
+                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%;  margin-right: 5px;"><a href="../listar/ListarCurso.php"><img src="../img/curso.png"><br>Curso</a></button>
+                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../listar/ListarEquipamento.php"><img src="../img/ferramentas.png"><br>Equipamentos</a></button>
+                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../listar/ListarUsuario.php"><img src="../img/usuario.png"><br>Usuario</a></button>
+                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../Principal.php"><img src="../img/sair.png"><br>Voltar</a></button>
                 </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
