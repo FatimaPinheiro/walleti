@@ -1,7 +1,3 @@
-<?php
-include 'conexao.php';
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -18,15 +14,11 @@ include 'conexao.php';
         <div class="container section1">
             <img src="../img/walle.png" class="img-responsive" style="padding: 0px 0px 20px 350px;">
             <nav class="navbar navbar-inverse">
-
-                
                 <div id="navbar" class="collapse navbar-collapse" style="background: #4F94CD">
                     <ul class="nav navbar-nav">
                         <li><a href="../Principal.php" style="color: #FFFFFF"><img src="../img/inicio.png" style="width: 30px;"> Inicio</a></li>
-
                         <li><a href="../cadastros/Cadastros.php" style="color: #FFFFFF"><img src="../img/cadastros.png" style="width: 30px;">Cadastros</a></li>
                         <li><a href="../cadastros/CadastrodeReservas.php" style="color: #FFFFFF"><img src="../img/reservas.png" style="width: 30px;">Reservas</a></li>
-
                         <li><a href="#contact" style="color: #FFFFFF"><img src="../img/relatorios.png" style="width: 30px;">Relatórios</a></li>
                         <li><a href="../Index.php" style="color: #FFFFFF"><img src="../img/sair.png" style="width: 30px;">Sair</a></li>
                     </ul>
@@ -39,13 +31,39 @@ include 'conexao.php';
                                 <input type="text" class="form-control" placeholder="Busca...">
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-
             </nav>
-            <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../cadastros/CadastroDeUsuario.php">Novo</a></button>
+            <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../cadastros/CadastroDeUsuario.php">Novo</a></button></br>
+            <h1>Listagem de Usuários</h1>
+            <table class="table table-striped">
+                <thead>
+            <th>#</th>
+            <th>Nome</th>
+            <th>email</th>
+            <th>cpf</th>
+            <th>senha</th>
+            </thead>
+            </table>
+            <tbody>
+                <?php>
+                $sql = "SELECT * FROM usuario";
+                
+                $resultado = mysql_query($sql);        
+                    while($linha = mysql_fetch_assoc($resultado))
+                {
+                    echo '<tr>';
+                    echo '<td>'. $linha['id'].'</td>';
+                    echo '<td>'. $linha['nome'].'</td>';
+                    echo '<td>'. $linha['email'].'</td>';
+                    echo '<td>'. $linha['cpf'].'</td>';
+                    echo '<td>'. $linha['senha'].'</td>';
+                    echo '</tr>';		
+		print_r($linha);
+                }
+                    mysql_close($conexao);
+                ?>
+            </tbody>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

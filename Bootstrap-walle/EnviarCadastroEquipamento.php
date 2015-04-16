@@ -5,7 +5,7 @@ include 'conexao.php';
 $nome = $_POST["nome"];
 $tipo = $_POST["tipo"];
 $descricao = $_POST["descricao"];
-$quandidade = $_POST["quandidade"];
+$quantidade = $_POST["quantidade"];
 $tombo = $_POST["tombo"];
 
  $sql = "INSERT INTO equipamento(nome, tipo, descricao, quantidade, tombo)

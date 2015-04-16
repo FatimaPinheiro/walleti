@@ -62,17 +62,13 @@
                 <div class="form-group">
                     <label for="equipamento" class="col-sm-2 control-label">Equipamento</label>
                     <div class="col-sm-10">
-                        <select name="equipamento" style="width: 70%;" class="form-control">
-                            <option></option>
-                        </select>
+                        <input type="text" name="equipamento" class="form-control" id="inputEquipamento" style="width: 70%;">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="curso" class="col-sm-2 control-label">Curso</label>
                     <div class="col-sm-10">
-                        <select name="equipamento" style="width: 70%;" class="form-control">
-                            <option></option>
-                        </select>
+                        <input type="text" name="curso" class="form-control" id="inputCurso" style="width: 70%;">
                     </div>
                 </div>
                 <div>

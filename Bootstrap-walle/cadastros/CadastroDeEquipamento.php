@@ -50,15 +50,13 @@
                 <div class="form-group">
                     <label for="tipoEquipamento" class="col-sm-2 control-label">Tipo</label>
                     <div class="col-sm-10">
-                        <select name="tipodeequipamento" style="width: 70%;" class="form-control">
-                            <option></option>
-                        </select>
+                        <input type="text" name="tipo" class="form-control"   style="width: 70%;" class="form-control">                    
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="descricao" class="col-sm-2 control-label">Descrição</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" rows="2" style="width: 70%;" ></textarea>
+                        <textarea class="form-control" name="descricao" rows="2" style="width: 70%;" ></textarea>
                     </div>
                 </div>
                 <div class="form-group">
@@ -68,9 +66,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="Tombo" class="col-sm-2 control-label">Tombo</label>
+                    <label for="tombo" class="col-sm-2 control-label">Tombo</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputPassword3" placeholder="Tombo do Equipamento" style="width: 70%;">
+                        <input type="int" name="tombo" class="form-control" id="inputTombo" placeholder="Tombo do Equipamento" style="width: 70%;">
                     </div>
                 </div>
                 <div>

@@ -15,8 +15,6 @@
         <div class="container section1">
             <img src="../img/walle.png" class="img-responsive" style="padding: 0px 0px 20px 350px;">
             <nav class="navbar navbar-inverse">
-
-
                 <div id="navbar" class="collapse navbar-collapse" style="background: #4F94CD">
                     <ul class="nav navbar-nav">
                         <li><a href="../Principal.php" style="color: #FFFFFF"><img src="../img/inicio.png" style="width: 30px;"> Inicio</a></li>
