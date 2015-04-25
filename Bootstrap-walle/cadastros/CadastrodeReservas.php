@@ -9,14 +9,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../css/Principal.css">
-
     </head>
     <body>
         <div class="container section1">
             <img src="../img/walle.png" class="img-responsive" style="padding: 0px 0px 20px 350px;">
             <nav class="navbar navbar-inverse">
-
-
                 <div id="navbar" class="collapse navbar-collapse" style="background: #4F94CD">
                     <ul class="nav navbar-nav">
                         <li><a href="../Principal.php" style="color: #FFFFFF"><img src="../img/inicio.png" style="width: 30px;"> Inicio</a></li>
@@ -37,8 +34,6 @@
 
                     </div>
                 </div><!--/.nav-collapse -->
-
-
             </nav>
             <form class="form-horizontal equipamento" method="post" action="../EnviarCadastroReserva.php">
                 <div class="form-group">

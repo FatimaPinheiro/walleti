@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../css/Principal.css">
-
     </head>
     <body>
         <div class="container section1">
@@ -34,39 +33,51 @@
                     </div>
                 </div>
             </nav>
-            <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../cadastros/CadastroDeUsuario.php">Novo</a></button></br>
-            <h1>Listagem de Usuários</h1>
-            <table class="table table-striped">
-                <thead>
-            <th>#</th>
-            <th>Nome</th>
-            <th>email</th>
-            <th>cpf</th>
-            <th>senha</th>
-            </thead>
-            </table>
-            <tbody>
-                <?php>
-                $sql = "SELECT * FROM usuario";
-                
-                $resultado = mysql_query($sql);        
-                    while($linha = mysql_fetch_assoc($resultado))
-                {
-                    echo '<tr>';
-                    echo '<td>'. $linha['id'].'</td>';
-                    echo '<td>'. $linha['nome'].'</td>';
-                    echo '<td>'. $linha['email'].'</td>';
-                    echo '<td>'. $linha['cpf'].'</td>';
-                    echo '<td>'. $linha['senha'].'</td>';
-                    echo '</tr>';		
-		print_r($linha);
-                }
-                    mysql_close($conexao);
-                ?>
-            </tbody>
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../cadastros/CadastroDeUsuario.php">Novo</a></button>
+                </div>
+            </div>
+            <div class = "container">
+
+                <h3>Listagem de Usuários</h3>
+                <table class="table table-striped">
+                    <thead>
+                    <th>id</th>
+                    <th>Nome</th>
+                    <th>email</th>
+                    <th>cpf</th>
+                    </thead>
+
+                    <tbody>
+                        <?php
+                        $conexao = mysql_connect("localhost", "root", "");
+                        if (!$conexao)
+                            die("Falha ao conectar ao banco");
+                        $bd = mysql_select_db("mydb");
+                        $sql = "SELECT * FROM usuario";
+
+                        mysql_query("SET character_set_results = 'utf-8', "
+                                . "character_set_client = 'utf-8', character_set_connection = 'utf-8', "
+                                . "character_set_database = utf-8, character_set_server = 'utf-8'", $conexao);
+                        $resultado = mysql_query($sql);
+                        while ($linha = mysql_fetch_assoc($resultado))
+                        {
+                            echo '<tr>';
+                            echo '<td>'. $linha['id'].'</td>';
+                            echo '<td>'. $linha['nome'].'</td>';
+                            echo '<td>'. $linha['email'].'</td>';
+                            echo '<td>'. $linha['cpf'].'</td>';                         
+                            echo '</tr>';
+                        }
+                        mysql_close($conexao);
+                        ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </body>
 </html>
 
