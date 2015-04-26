@@ -35,13 +35,46 @@
                                 <input type="text" class="form-control" placeholder="Busca...">
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-
             </nav>
+            <div class="row">
+                <div class="col-md-12">
             <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../cadastros/CadastroDeCurso.php">Novo</a></button>
+                </div>
+            </div>
+            <div class = "container">
+                <h3>Listagem de Cursos</h3>
+                <table class="table table-striped">
+                    <thead>
+                    <th>id</th>
+                    <th>curso</th>
+                    </thead>
+
+                    <tbody>
+                        <?php
+                        $conexao = mysql_connect("localhost", "root", "");
+                        if (!$conexao)
+                            die("Falha ao conectar ao banco");
+                        $bd = mysql_select_db("mydb");
+                        $sql = "SELECT * FROM curso";
+
+                        mysql_query("SET character_set_results = 'utf-8', "
+                                . "character_set_client = 'utf-8', character_set_connection = 'utf-8', "
+                                . "character_set_database = utf-8, character_set_server = 'utf-8'", $conexao);
+                        $resultado = mysql_query($sql);
+                        while ($linha = mysql_fetch_assoc($resultado))
+                        {
+                            echo '<tr>';
+                            echo '<td>'. $linha['id'].'</td>';
+                            echo '<td>'. $linha['curso'].'</td>';                         
+                            echo '</tr>';
+                        }
+                        mysql_close($conexao);
+                        ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
