@@ -47,8 +47,8 @@
                 <h3>Listagem de Cursos</h3>
                 <table class="table table-striped">
                     <thead>
-                    <th>id</th>
-                    <th>curso</th>
+                    <th>ID</th>
+                    <th>CURSO</th>
                     </thead>
 
                     <tbody>

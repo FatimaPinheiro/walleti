@@ -48,12 +48,12 @@
                 <h3>Listagem de Equipamentos</h3>
                 <table class="table table-striped">
                     <thead>
-                    <th>id</th>
-                    <th>Nome</th>
-                    <th>tipo</th>
-                    <th>descricao</th>
-                    <th>quantidade</th>
-                    <th>tombo</th>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>TIPO</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>QUANTIDADE</th>
+                    <th>TOMBO</th>
                     </thead>
 
                     <tbody>

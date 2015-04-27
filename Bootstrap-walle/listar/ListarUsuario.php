@@ -43,10 +43,10 @@
                 <h3>Listagem de Usuários</h3>
                 <table class="table table-striped">
                     <thead>
-                    <th>id</th>
-                    <th>Nome</th>
-                    <th>email</th>
-                    <th>cpf</th>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>EMAIL</th>
+                    <th>CPF</th>
                     </thead>
 
                     <tbody>
