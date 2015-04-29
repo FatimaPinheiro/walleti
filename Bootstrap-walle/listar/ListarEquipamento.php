@@ -58,10 +58,10 @@
 
                     <tbody>
                         <?php
-                        $conexao = mysql_connect("localhost", "root", "");
+                        $conexao = mysql_connect("localhost", "root", "230785");
                         if (!$conexao)
                             die("Falha ao conectar ao banco");
-                        $bd = mysql_select_db("mydb");
+                        $bd = mysql_select_db("walledb");
                         $sql = "SELECT * FROM equipamento";
 
                         mysql_query("SET character_set_results = 'utf-8', "
@@ -76,7 +76,8 @@
                             echo '<td>'. $linha['tipo'].'</td>';
                             echo '<td>'. $linha['descricao'].'</td>';                         
                             echo '<td>'. $linha['quantidade'].'</td>';                         
-                            echo '<td>'. $linha['tombo'].'</td>';                         
+                            echo '<td>'. $linha['tombo'].'</td>';      
+                            echo '<td><a href="../edicao/EdicaoDeEquipamento.php?id='.$linha['id'].'">Editar</a></td>';  
                             echo '</tr>';
                         }
                         mysql_close($conexao);

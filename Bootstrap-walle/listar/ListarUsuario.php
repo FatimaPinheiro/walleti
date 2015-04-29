@@ -51,10 +51,10 @@
 
                     <tbody>
                         <?php
-                        $conexao = mysql_connect("localhost", "root", "");
+                        $conexao = mysql_connect("localhost", "root", "230785");
                         if (!$conexao)
                             die("Falha ao conectar ao banco");
-                        $bd = mysql_select_db("mydb");
+                        $bd = mysql_select_db("walledb");
                         $sql = "SELECT * FROM usuario";
 
                         mysql_query("SET character_set_results = 'utf-8', "

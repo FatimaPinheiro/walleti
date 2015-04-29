@@ -14,70 +14,14 @@ include 'conexao.php';
     </head>
     <body>
         <div class="container section1">
-            <img src="img/walle.png" class="img-responsive" style="padding: 0px 0px 20px 350px;">
-            <nav class="navbar navbar-inverse">                
-                <div id="navbar" class="collapse navbar-collapse" style="background: #4F94CD">
-                    <ul class="nav navbar-nav">
-                        <li><a href="Principal.php" style="color: #FFFFFF"><img src="img/inicio.png" style="width: 30px;"> Inicio</a></li>
-                        <li><a href="cadastros/Cadastros.php" style="color: #FFFFFF"><img src="img/cadastros.png" style="width: 30px;">Cadastros</a></li>
-                        <li><a href="cadastros/CadastrodeReservas.php" style="color: #FFFFFF"><img src="img/reservas.png" style="width: 30px;">Reservas</a></li>
-                        <li><a href="#contact" style="color: #FFFFFF"><img src="img/relatorios.png" style="width: 30px;">Relatórios</a></li>
-                        <li><a href="#contact" style="color: #FFFFFF"><img src="img/sair.png" style="width: 30px;">Sair</a></li>
-                    </ul>
-                    <div class="row" style="padding-top: 14px; padding-right: -0px;">
-                        <div class="col-md-4">
-                            <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">Pesquisar!</button>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Busca...">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <?php            include '../Bootstrap-walle/navbar.php'; ?>
             <div class="container">
                 <ul class="nav nav-tabs">
                     <li role="presentation" class="active"><a href="#">Lista de Equipamentos</a></li>
                     <li role="presentation"><a href="#">Lista de Usuarios</a></li>
                     <li role="presentation"><a href="#">Lista de Reservas</a></li>
                 </ul>   
-                <table class="table table-striped">
-                    <thead>
-                    <th>ID</th>
-                    <th>NOME</th>
-                    <th>TIPO</th>
-                    <th>DESCRIÇÃO</th>
-                    <th>QUANTIDADE</th>
-                    <th>TOMBO</th>
-                    </thead>
-
-                    <tbody>
-                        <?php
-                        $conexao = mysql_connect("localhost", "root", "230785");
-                        if (!$conexao)
-                            die("Falha ao conectar ao banco");
-                        $bd = mysql_select_db("walledb");
-                        $sql = "SELECT * FROM equipamento";
-
-                        mysql_query("SET character_set_results = 'utf-8', "
-                                . "character_set_client = 'utf-8', character_set_connection = 'utf-8', "
-                                . "character_set_database = utf-8, character_set_server = 'utf-8'", $conexao);
-                        $resultado = mysql_query($sql);
-                        while ($linha = mysql_fetch_assoc($resultado)) {
-                            echo '<tr>';
-                            echo '<td>' . $linha['id'] . '</td>';
-                            echo '<td>' . $linha['nome'] . '</td>';
-                            echo '<td>' . $linha['tipo'] . '</td>';
-                            echo '<td>' . $linha['descricao'] . '</td>';
-                            echo '<td>' . $linha['quantidade'] . '</td>';
-                            echo '<td>' . $linha['tombo'] . '</td>';
-                            echo '</tr>';
-                        }
-                        mysql_close($conexao);
-                        ?>
-                    </tbody>
-                </table>
+               <?php include '../Bootstrap-walle/listar/ListarEquipamento.php'; ?>
             </div>
 
         </div>
