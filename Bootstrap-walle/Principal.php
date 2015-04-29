@@ -36,6 +36,50 @@ include 'conexao.php';
                     </div>
                 </div>
             </nav>
+            <div class="container">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="#">Lista de Equipamentos</a></li>
+                    <li role="presentation"><a href="#">Lista de Usuarios</a></li>
+                    <li role="presentation"><a href="#">Lista de Reservas</a></li>
+                </ul>   
+                <table class="table table-striped">
+                    <thead>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>TIPO</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>QUANTIDADE</th>
+                    <th>TOMBO</th>
+                    </thead>
+
+                    <tbody>
+                        <?php
+                        $conexao = mysql_connect("localhost", "root", "230785");
+                        if (!$conexao)
+                            die("Falha ao conectar ao banco");
+                        $bd = mysql_select_db("walledb");
+                        $sql = "SELECT * FROM equipamento";
+
+                        mysql_query("SET character_set_results = 'utf-8', "
+                                . "character_set_client = 'utf-8', character_set_connection = 'utf-8', "
+                                . "character_set_database = utf-8, character_set_server = 'utf-8'", $conexao);
+                        $resultado = mysql_query($sql);
+                        while ($linha = mysql_fetch_assoc($resultado)) {
+                            echo '<tr>';
+                            echo '<td>' . $linha['id'] . '</td>';
+                            echo '<td>' . $linha['nome'] . '</td>';
+                            echo '<td>' . $linha['tipo'] . '</td>';
+                            echo '<td>' . $linha['descricao'] . '</td>';
+                            echo '<td>' . $linha['quantidade'] . '</td>';
+                            echo '<td>' . $linha['tombo'] . '</td>';
+                            echo '</tr>';
+                        }
+                        mysql_close($conexao);
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
