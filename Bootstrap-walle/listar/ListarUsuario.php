@@ -67,7 +67,7 @@
                             echo '<td>'. $linha['id'].'</td>';
                             echo '<td>'. $linha['nome'].'</td>';
                             echo '<td>'. $linha['email'].'</td>';
-                            echo '<td>'. $linha['cpf'].'</td>';                         
+                            echo '<td>'. $linha['CPF'].'</td>';echo '<td><a href="../Editar/EditarUsuario.php?id='.$linha['id'].'">Editar</a></td>';                           
                             echo '</tr>';
                         }
                         mysql_close($conexao);

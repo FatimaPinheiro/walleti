@@ -66,8 +66,8 @@
                         while ($linha = mysql_fetch_assoc($resultado))
                         {
                             echo '<tr>';
-                            echo '<td>'. $linha['id'].'</td>';
-                            echo '<td>'. $linha['curso'].'</td>';                         
+                            echo '<td>'. $linha['idcurso'].'</td>';
+                            echo '<td>'. $linha['NomeCurso'].'</td>';                         
                             echo '</tr>';
                         }
                         mysql_close($conexao);
