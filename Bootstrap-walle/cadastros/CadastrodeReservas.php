@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include("../conexao.php"); ?>
+
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
@@ -39,7 +39,7 @@
                 <div class="form-group">
                     <label for="data" class="col-sm-2 control-label">Data</label>
                     <div class="col-sm-10">
-                        <input type="date" name="data" class="form-control" id="inputEmail3" style="width: 30%;" required>
+                        <input type="date" name="data" class="form-control" id="inputEmail3" style="width: 30%;">
                     </div>
                 </div>
                 <div class="form-group">
@@ -57,16 +57,7 @@
                 <div class="form-group">
                     <label for="equipamento" class="col-sm-2 control-label">Equipamento</label>
                     <div class="col-sm-10">
-                        <select name="equipamento">
-                            <option></option>
-                            <?php 
-                                $sqlEqui = "SELECT  * FROM equipamento ORDER BY nome";
-                                $queryEqui = mysql_query($sqlEqui);
-                                while($rowEqui = mysql_fetch_assoc($queryEqui)){
-                                    echo '<option value="'.$rowEqui['id'].'">'.$rowEqui['nome'].'</option>';
-                                }
-                            ?>
-                        </select>
+                        <input type="text" name="equipamento" class="form-control" id="inputEquipamento" style="width: 70%;">
                     </div>
                 </div>
                 <div class="form-group">
