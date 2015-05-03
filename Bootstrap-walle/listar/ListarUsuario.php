@@ -50,6 +50,7 @@
                     </thead>
 
                     <tbody>
+                       
                         <?php
                         $conexao = mysql_connect("localhost", "root", "");
                         if (!$conexao)
@@ -61,13 +62,14 @@
                                 . "character_set_client = 'utf-8', character_set_connection = 'utf-8', "
                                 . "character_set_database = utf-8, character_set_server = 'utf-8'", $conexao);
                         $resultado = mysql_query($sql);
-                        while ($linha = mysql_fetch_assoc($resultado))
-                        {
+                        while ($linha = mysql_fetch_assoc($resultado)) {
                             echo '<tr>';
-                            echo '<td>'. $linha['id'].'</td>';
-                            echo '<td>'. $linha['nome'].'</td>';
-                            echo '<td>'. $linha['email'].'</td>';
-                            echo '<td>'. $linha['CPF'].'</td>';echo '<td><a href="../Editar/EditarUsuario.php?id='.$linha['id'].'">Editar</a></td>';                           
+                            echo '<td>' . $linha['id'] . '</td>';
+                            echo '<td>' . $linha['nome'] . '</td>';
+                            echo '<td>' . $linha['email'] . '</td>';
+                            echo '<td>' . $linha['CPF'] . '</td>';
+                            echo '<td><a href="../Editar/EditarUsuario.php?id=' . $linha['id'] . '"><img src="../img/alterar.png"></img></a></td>';
+                            echo '<td><a href="../Editar/ExcluirUsuario.php?id=' . $linha['id'] . '"><img src="../img/excluir.png"></img></a></td>';
                             echo '</tr>';
                         }
                         mysql_close($conexao);
@@ -76,8 +78,8 @@
                 </table>
             </div>
         </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </body>
 </html>
 

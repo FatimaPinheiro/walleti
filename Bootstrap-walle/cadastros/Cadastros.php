@@ -25,28 +25,18 @@
                         <li><a href="#contact" style="color: #FFFFFF"><img src="../img/relatorios.png" style="width: 30px;">Relatórios</a></li>
                         <li><a href="../Index.php" style="color: #FFFFFF"><img src="../img/sair.png" style="width: 30px;">Sair</a></li>
                     </ul>
-                    <div class="row" style="padding-top: 14px; padding-right: -0px;">
-                        <div class="col-md-4">
-                            <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">Pesquisar!</button>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Busca...">
-                            </div>
-                        </div>
 
-                    </div>
                 </div><!--/.nav-collapse -->
 
 
             </nav>
-            
-                <div>
-                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%;  margin-right: 5px;"><a href="../listar/ListarCurso.php"><img src="../img/curso.png"><br>Curso</a></button>
-                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../listar/ListarEquipamento.php"><img src="../img/ferramentas.png"><br>Equipamentos</a></button>
-                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../listar/ListarUsuario.php"><img src="../img/usuario.png"><br>Usuario</a></button>
-                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;"><a href="../Principal.php"><img src="../img/sair.png"><br>Voltar</a></button>
-                </div>
+
+            <div class="botoescadastro">
+                <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; height: 180px;"><a href="../listar/ListarUsuario.php"><img src="../img/usuario.png"><br>Usuario</a></button>
+                <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; height: 180px;"><a href="../listar/ListarEquipamento.php"><img src="../img/ferramentas.png"><br>Equipamentos</a></button>
+                <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; height: 180px;"><a href="../listar/ListarCurso.php"><img src="../img/curso.png"><br>Curso</a></button>
+                <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; height: 180px;"><a href="../Principal.php"><img src="../img/sair.png"><br>Voltar</a></button>
+            </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

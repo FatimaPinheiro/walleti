@@ -1,5 +1,30 @@
 <!DOCTYPE html>
+<?php
+include("../conexao.php");
 
+if (!empty($_POST['NomeCurso'])) {
+    $idcurso = $_POST['idcurso'];
+    $NomeCurso = $_POST['NomeCurso'];
+
+
+    $sql = "UPDATE curso SET  
+                        NomeCurso ='$NomeCurso'
+                      
+
+                        WHERE  idcurso = $idcurso";
+
+    $query = mysql_query($sql);
+}
+
+$idcurso = $_GET['idcurso'];
+$sql = "SELECT *
+                    FROM curso
+                    WHERE idcurso = $idcurso
+                    LIMIT 1";
+
+$query = mysql_query($sql);
+$row = mysql_fetch_assoc($query);
+?>
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
@@ -20,34 +45,25 @@
                 <div id="navbar" class="collapse navbar-collapse" style="background: #4F94CD">
                     <ul class="nav navbar-nav">
                         <li><a href="../Principal.php" style="color: #FFFFFF"><img src="../img/inicio.png" style="width: 30px;"> Inicio</a></li>
-                        <li><a href="Cadastros.php" style="color: #FFFFFF"><img src="../img/cadastros.png" style="width: 30px;">Cadastros</a></li>
-                        <li><a href="CadastrodeReservas.php" style="color: #FFFFFF"><img src="../img/reservas.png" style="width: 30px;">Reservas</a></li>
+                        <li><a href="../cadastros/Cadastros.php" style="color: #FFFFFF"><img src="../img/cadastros.png" style="width: 30px;">Cadastros</a></li>
+                        <li><a href="../cadastros/CadastrodeReservas.php" style="color: #FFFFFF"><img src="../img/reservas.png" style="width: 30px;">Reservas</a></li>
                         <li><a href="#contact" style="color: #FFFFFF"><img src="../img/relatorios.png" style="width: 30px;">Relatórios</a></li>
                         <li><a href="../Index.php" style="color: #FFFFFF"><img src="../img/sair.png" style="width: 30px;">Sair</a></li>
                     </ul>
-                    <div class="row" style="padding-top: 14px; padding-right: -0px;">
-                        <div class="col-md-4">
-                            <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">Pesquisar!</button>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Busca...">
-                            </div>
-                        </div>
 
-                    </div>
                 </div><!--/.nav-collapse -->
             </nav>
-            <form class="form-horizontal equipamento" method="post" action="../EnviarCadastroCurso.php">
+            <form class="form-horizontal equipamento" method="post" action="">
+                <input type="hidden" name="idcurso" value="<?php echo $row['idcurso']; ?>" />
                 <div class="form-group">
                     <label for="curso" class="col-sm-2 control-label">Curso</label>
                     <div class="col-sm-10">
-                        <input type="text" name="NomeCurso" class="form-control" id="inputCurso" placeholder="Nome  do Curso" style="width: 70%;">
+                        <input type="text" name="NomeCurso" class="form-control" value="<?php echo $row['NomeCurso']; ?>" placeholder="Nome  do Curso" style="width: 70%;">
                     </div>
                 </div>
                 <div>
                     <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;">Salvar</button>
-                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%;">Excluir</button>
+
                 </div>
             </form>
         </div>

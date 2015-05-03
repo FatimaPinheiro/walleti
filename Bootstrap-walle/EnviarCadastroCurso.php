@@ -2,10 +2,10 @@
 
 include 'conexao.php';
 
-$curso = $_POST["curso"];
+$NomeCurso = $_POST["NomeCurso"];
 
 $sql = "INSERT INTO curso(NomeCurso)
-    VALUES('$curso')";
+    VALUES('$NomeCurso')";
     
      $query = mysql_query($sql) or die("Houve um erro na gravação dos dados, verifique os valores passados");
 

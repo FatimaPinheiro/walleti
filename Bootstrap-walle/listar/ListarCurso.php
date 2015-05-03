@@ -67,7 +67,9 @@
                         {
                             echo '<tr>';
                             echo '<td>'. $linha['idcurso'].'</td>';
-                            echo '<td>'. $linha['NomeCurso'].'</td>';                         
+                            echo '<td>'. $linha['NomeCurso'].'</td>';  
+                            echo '<td><a href="../Editar/EditarCurso.php?idcurso='.$linha['idcurso'].'"><img src="../img/alterar.png"></a></td>';
+                            echo '<td><a href="../Editar/ExcluirCurso.php?idcurso=' . $linha['idcurso'] . '"><img src="../img/excluir.png"></img></a></td>';
                             echo '</tr>';
                         }
                         mysql_close($conexao);
