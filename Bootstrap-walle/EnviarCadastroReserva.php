@@ -8,6 +8,7 @@ $local = $_POST["local"];
 $equipamento = $_POST["equipamento"];
 $curso = $_POST["curso"];
 
+           
 $sql = "INSERT INTO reserva (data, horario, local, equipamento, curso)
     VALUES('$data', '$horario', '$local', '$equipamento', '$curso')";
     

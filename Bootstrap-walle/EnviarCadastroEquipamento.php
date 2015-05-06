@@ -6,12 +6,17 @@ $nome = $_POST["nome"];
 $tipo = $_POST["tipo"];
 $descricao = $_POST["descricao"];
 $quantidade = $_POST["quantidade"];
-$tombo = $_POST["tombo"];
+$situacao = $_POST["situacao"];
 
- $sql = "INSERT INTO equipamento(nome, tipo, descricao, quantidade, tombo)
-    VALUES('$nome', '$tipo', '$descricao', '$quantidade', '$tombo')";
+while ($quantidade > 0){
+    $sql = "INSERT INTO equipamento(nome, tipo, descricao, quantidade, situacao)
+    VALUES('$nome', '$tipo', '$descricao', '1', 'Disponivel')";
+    
+    $quantidade--;
     
      $query = mysql_query($sql) or die("Houve um erro na gravação dos dados, verifique os valores passados");
+}
+ 
 
    
     header("location: Principal.php"); 

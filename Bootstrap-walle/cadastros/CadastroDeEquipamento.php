@@ -65,15 +65,10 @@
                         <input type="text" name="quantidade" class="form-control" id="inputEmail3" placeholder="Quantidade de equipamentos" style="width: 70%;">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="tombo" class="col-sm-2 control-label">Tombo</label>
-                    <div class="col-sm-10">
-                        <input type="int" name="tombo" class="form-control" id="inputTombo" placeholder="Tombo do Equipamento" style="width: 70%;">
-                    </div>
-                </div>
+                
                 <div>
                     <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;">Salvar</button>
-                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%;">Excluir</button>
+                    
                 </div>
             </form>
         </div>
