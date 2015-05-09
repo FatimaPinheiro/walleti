@@ -1,0 +1,19 @@
+.container{
+    width: 400px;
+   padding: 20px 40px 40px 40px;
+}
+.section1{
+width: 400px;
+height: 400px;
+background-clip: padding-box;
+background-color: #FFF;
+border: 1px solid rgba(0,0,0,.3);
+border-radius: 6px;
+box-shadow: 0 3px 7px rgba(0,0,0,.3);
+outline: 0;
+position: fixed;
+top: 10%;
+left: 50%;
+margin-left: -200px;
+z-index: 10000;
+}

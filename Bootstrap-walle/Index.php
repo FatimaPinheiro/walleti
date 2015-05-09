@@ -9,11 +9,11 @@ include 'conexao.php';
         <title>Login Walleti</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="login.css">
     </head>
     <body>
         <div class="container section1">
-            <img src="img/walle.png" class="img-responsive" style="padding-left: 40px;">
+            <img src="Adm/img/walle.png" class="img-responsive" style="padding-left: 40px;">
 
             <form class="form-signin" method="post" action="AutenticarUsuario.php">
                 <h2 class="form-signin-heading">Login</h2>

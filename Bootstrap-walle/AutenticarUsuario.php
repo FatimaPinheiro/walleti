@@ -8,7 +8,7 @@ include "conexao.php";
 	<title></title>
 	<script type="text/javascript">
 		function loginsuccessfully(){
-		setTimeout("window.location='Principal.php'");
+		setTimeout("window.location='Adm/Principal.php'");
 }
 	function loginfailed(){
 	setTimeout("window.location='Index.php'");
