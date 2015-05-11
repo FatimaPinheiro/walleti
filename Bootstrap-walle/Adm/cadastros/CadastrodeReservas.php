@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<?php 
-                            include '../../conexao.php';
-                            ?>
+<?php
+include '../../conexao.php';
+?>
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
@@ -24,81 +24,174 @@
                         <li><a href="#contact" style="color: #FFFFFF"><img src="../img/relatorios.png" style="width: 30px;">Relatórios</a></li>
                         <li><a href="../Index.php" style="color: #FFFFFF"><img src="../img/sair.png" style="width: 30px;">Sair</a></li>
                     </ul>
-                   
+
                 </div><!--/.nav-collapse -->
             </nav>
             <form class="form-horizontal equipamento" method="post" action="../EnviarCadastroReserva.php">
-                <div class="form-group">
-                    <label for="data" class="col-sm-2 control-label">Data</label>
-                    <div class="col-sm-10">
-                        <input type="date" name="data" class="form-control" id="inputEmail3" style=" width: 30%;">
+                <div class="row">
+                    <div class="col-md-8">
+                        <label for="usuario">Usuário</label>
+                        <select name = "usuario" class="form-control">
+                            <option> </option>
+                            <?php
+                            $sqlUsuario = "select * from usuario where nivel = 1  order by nome";
+                            $result = mysql_query($sqlUsuario);
+
+                            while ($registro = mysql_fetch_array($result)) {
+                                $id = $registro["id"];
+
+                                if ($id == $id)
+                                    $selecionado = "selected";
+                                else
+                                    $selecionado = "";
+
+                                print "<option value = \"$id\" $selecionado > $registro[nome] </option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="data">Data</label>
+                        <div>
+                            <input type="date" name="data" class="form-control">
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="horario" class="col-sm-2 control-label">Horário</label>
-                    <select name="local" class="form-control" style="width: 30%;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="horario">Horário</label>
+                    <select name="local" class="form-control">
+                        <option></option>
+                        <?php
+                        $sqlhorario = "select * from horario order by horario";
+                        $resulthorario = mysql_query($sqlhorario);
+
+
+
+                        while ($registro = mysql_fetch_array($resulthorario)) {
+                            $id = $registro["id"];
+
+                            if ($id == $id)
+                                $selecionado = "selected";
+                            else
+                                $selecionado = "";
+
+                            print "<option value = \"$id\" $selecionado > $registro[horario] </option>";
+                        }
+                        ?>
+                    </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Turno">Turno</label>
+                    <div>
+                        <select name="turno" class="form-control" >
                             <option></option>
-                    <?php 
-                           
-                                $sqlhorario = "SELECT  * FROM horario ORDER BY horario";
-                                $queryhorario = mysql_query($sqlhorario);
-                                while($rowhorario = mysql_fetch_assoc($queryhorario)){
-                                    echo '<option value="'.$rowhorario['id'].'">'.$rowhorario['horario'].'</option>';
-                                }
-                            ?>
-                             </select>
-                </div>
-                <div class="form-group">
-                    <label for="Local" class="col-sm-2 control-label">Local</label>
-                    <div class="col-sm-10">
-                         <select name="local" class="form-control" style=" width: 40%;">
-                            <option></option>
-                            <?php 
-                           
-                                $sqlLocal = "SELECT  * FROM local ORDER BY nome";
-                                $queryLocal = mysql_query($sqlLocal);
-                                while($rowlocal = mysql_fetch_assoc($queryLocal)){
-                                    echo '<option value="'.$rowlocal['id'].'">'.$rowlocal['nome'].'</option>';
-                                }
+                            <?php
+                            $sqlturno = "select * from turno order by turno";
+                            $resultturno = mysql_query($sqlturno);
+
+
+
+                            while ($registro = mysql_fetch_array($resultturno)) {
+                                $id = $registro["id"];
+
+                                if ($id == $id)
+                                    $selecionado = "selected";
+                                else
+                                    $selecionado = "";
+
+                                print "<option value = \"$id\" $selecionado > $registro[turno] </option>";
+                            }
                             ?>
                         </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="equipamento" class="col-sm-2 control-label">Equipamento</label>
-                    <div class="col-sm-10">
-                         <select name="equipamento" class="form-control" style="width: 40%;" >
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="Local">Local</label>
+                    <div>
+                        <select name="local" class="form-control" >
                             <option></option>
-                           <?php
-                         
-                                $sqlEqui = "SELECT  * FROM equipamento ORDER BY nome";
-                                $queryEqui = mysql_query($sqlEqui);
-                                while ($rowEqui = mysql_fetch_assoc($queryEqui)) {
-                                    echo '<option value="' . $rowEqui['id'] . '">' . $rowEqui['nome'] . '</option>';
-                                }
-                           
+                            <?php
+                            $sqllocal = "select * from local order by nome";
+                            $resultlocal = mysql_query($sqllocal);
+
+
+
+                            while ($registro = mysql_fetch_array($resultlocal)) {
+                                $id = $registro["id"];
+
+                                if ($id == $id)
+                                    $selecionado = "selected";
+                                else
+                                    $selecionado = "";
+
+                                print "<option value = \"$id\" $selecionado > $registro[nome] </option>";
+                            }
                             ?>
                         </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="curso" class="col-sm-2 control-label">Curso</label>
-                   <select name="NomeCurso" class="form-control" style="width: 40%;">
+                    <div class="col-md-6">
+                        <label for="equipamento">Equipamento</label>
+                    <div>
+                        <select name="equipamento" class="form-control" >
                             <option></option>
-                    <?php 
-                           
-                                $sqlcurso = "SELECT  * FROM curso ORDER BY NomeCurso";
-                                $querycurso = mysql_query($sqlcurso);
-                                while($rowcurso = mysql_fetch_assoc($querycurso)){
-                                    echo '<option value="'.$rowcurso['idcurso'].'">'.$rowcurso['NomeCurso'].'</option>';
-                                }
+                            <?php
+                            $sqlequi = "select * from Equipamento where situacao = 'Disponivel' order by nome";
+                            $resultequi = mysql_query($sqlequi);
+
+
+
+                            while ($registro = mysql_fetch_array($resultequi)) {
+                                $id = $registro["id"];
+
+                                if ($id == $id)
+                                    $selecionado = "selected";
+                                else
+                                    $selecionado = "";
+
+                                print "<option value = \"$id\" $selecionado > $registro[nome] </option>";
+                            }
                             ?>
-                             </select>
+                        </select>
+                    </div>
+                    </div>
                 </div>
-                <div>
-                    <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 20%; margin-right: 10px;">Salvar</button>
-                    <button class="btn btn-lg btn-primary btn-block " type="submit" style="background: #4F94CD; width: 20%;">Excluir</button>
+                <div class="row">
+                     <div class="col-md-6">
+                        <label for="curso">Curso</label>
+                    <select name="NomeCurso" class="form-control">
+                        <option> </option>
+                        <?php
+                        $sqlcurso = "select * from curso order by NomeCurso";
+                        $resultcurso = mysql_query($sqlcurso);
+
+
+
+                        while ($registro = mysql_fetch_array($resultcurso)) {
+                            $id = $registro["id"];
+
+                            if ($id == $id)
+                                $selecionado = "selected";
+                            else
+                                $selecionado = "";
+
+                            print "<option value = \"$id\" $selecionado > $registro[NomeCurso] </option>";
+                        }
+                        ?>
+                    </select>
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                       <button class="btn btn-lg btn-primary btn-block button" type="submit" style="background: #4F94CD; width: 94%;">Salvar</button>   
+                    </div>
+                </div>
+               
             </form>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

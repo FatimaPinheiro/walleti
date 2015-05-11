@@ -50,9 +50,8 @@
                     <thead>
                     <th>ID</th>
                     <th>NOME</th>
-                    <th>TIPO</th>
                     <th>DESCRIÇÃO</th>
-                    <th>QUANTIDADE</th>
+                    <th>TOMBO</th>
                     <th>EDITAR</th>
                     <th>EXCLUIR</th>
                     </thead>
@@ -74,9 +73,8 @@
                             echo '<tr>';
                             echo '<td>'. $linha['id'].'</td>';
                             echo '<td>'. $linha['nome'].'</td>';
-                            echo '<td>'. $linha['tipo'].'</td>';
-                            echo '<td>'. $linha['descricao'].'</td>';                         
-                            echo '<td>'. $linha['quantidade'].'</td>';                         
+                            echo '<td>'. $linha['descricao'].'</td>';  
+                             echo '<td>'. $linha['tombo'].'</td>'; 
                             echo '<td><a href="../Editar/EditarEquipamento.php?id='.$linha['id'].'"><img src="../img/alterar.png"></img></a></td>';  
                             echo '<td><a href="../Editar/ExcluirEquipamento.php?id=' . $linha['id'] . '"><img src="../img/excluir.png"></img></a></td>';
                             echo '</tr>';

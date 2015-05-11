@@ -3,13 +3,12 @@
 include '../conexao.php';
 
 $nome = $_POST["nome"];
-$tipo = $_POST["tipo"];
 $descricao = $_POST["descricao"];
-$quantidade = $_POST["quantidade"];
+$tombo = $_POST["tombo"];
 $situacao = $_POST["situacao"];
 
-    $sql = "INSERT INTO equipamento(nome, tipo, descricao, quantidade, situacao)
-    VALUES('$nome', '$tipo', '$descricao', '1', 'Disponivel')";
+    $sql = "INSERT INTO equipamento(nome, descricao, tombo, situacao)
+    VALUES('$nome', '$descricao', '$tombo', 'Disponivel')";
     
     
     

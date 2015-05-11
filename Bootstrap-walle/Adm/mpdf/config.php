@@ -79,8 +79,8 @@ $this->progbar_altHTML = '';			// Should include <html> and <body> but NOT end t
 $this->dpi = 96;					// To interpret "px" pixel values in HTML/CSS (see img_dpi below)
 // Automatically correct for tags where HTML specifies optional end tags e.g. P,LI,DD,TD
 // If you are confident input html is valid XHTML, turning this off may make it more reliable(?)
-$this->allow_html_optional_endtags = true;
-$this->ignore_invalid_utf8 = false;
+$this->allow_html_optional_endtags = false;
+$this->ignore_invalid_utf8 = true;
 $this->text_input_as_HTML = false; 		// Converts all entities in Text inputs to UTF-8 before encoding
 $this->useGraphs = false;
 // When writing a block element with position:fixed and overflow:auto, mPDF scales it down to fit in the space
@@ -104,7 +104,7 @@ $this->PDFXauto = false;			// Overrides warnings making changes when possible to
 $this->PDFA = false;				// true=Forces compliance with PDFA-1b spec
 							// Can use with $this->restrictColorSpace=3 (for a CMYK file)
 							// Any other settings, uses RGB profile
-$this->PDFAauto = false;			// Overrides warnings making changes when possible to force PDFA1-b compliance
+$this->PDFAauto = true;			// Overrides warnings making changes when possible to force PDFA1-b compliance
 $this->ICCProfile = '';				// Colour profile OutputIntent
 							// sRGB_IEC61966-2-1 (=default if blank and PDFA),  or other added .icc profile
 							// Must be CMYK for PDFX, or appropriate type for PDFA(RGB or CMYK)

@@ -48,21 +48,15 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="tipoEquipamento" class="col-sm-2 control-label">Tipo</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="tipo" class="form-control"   style="width: 70%;" class="form-control">                    
-                    </div>
-                </div>
-                <div class="form-group">
                     <label for="descricao" class="col-sm-2 control-label">Descrição</label>
                     <div class="col-sm-10">
                         <textarea class="form-control" name="descricao" rows="2" style="width: 70%;" ></textarea>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="quantidade" class="col-sm-2 control-label">Quantidade</label>
+                    <label for="tombo" class="col-sm-2 control-label">Tombo</label>
                     <div class="col-sm-10">
-                        <input type="text" name="quantidade" class="form-control" id="inputEmail3" placeholder="Quantidade de equipamentos" style="width: 70%;">
+                        <input type="text" name="tombo" class="form-control" placeholder="Tombo" style="width: 70%;">
                     </div>
                 </div>
                 
