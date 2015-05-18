@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^walleti\.interativadez\.com\.br$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.walleti\.interativadez\.com\.br$
+RewriteRule ^/?$ "http\:\/\/walleti\.interativadez\.com\.br\/login\.html" [R=301,L]
+
